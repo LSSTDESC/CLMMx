@@ -1,12 +1,13 @@
 import GCRCatalogs
 
 GCRCatalogs.set_root_dir_by_site("in2p3")
-import matplotlib.pyplot as plt
 import pickle
 import sys
+
+import astropy.units as u
+import matplotlib.pyplot as plt
 import numpy as np
 from astropy.cosmology import FlatLambdaCDM
-import astropy.units as u
 from astropy.table import Table
 
 

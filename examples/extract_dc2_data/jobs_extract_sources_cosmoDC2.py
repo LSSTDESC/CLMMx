@@ -1,4 +1,6 @@
-import os, sys
+import os
+import sys
+
 import numpy as np
 
 number_of_splits = 20

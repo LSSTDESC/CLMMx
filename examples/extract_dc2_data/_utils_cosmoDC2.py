@@ -1,11 +1,12 @@
-import numpy as np
-from astropy.table import QTable, Table, vstack, join
-import pickle
-import pandas as pd
-import clmm
 import cmath
-import healpy
+import pickle
+
+import clmm
 import GCRCatalogs
+import healpy
+import numpy as np
+import pandas as pd
+from astropy.table import QTable, Table, join, vstack
 
 GCRCatalogs.set_root_dir_by_site("in2p3")
 import mysql

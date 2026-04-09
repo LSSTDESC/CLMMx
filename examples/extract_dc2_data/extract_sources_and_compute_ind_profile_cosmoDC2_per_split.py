@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
-import numpy as np
-import GCRCatalogs
+import glob
+import pickle
+import sys
 
+import astropy
+import astropy.units as u
+import clmm
+import GCRCatalogs
 # GCRCatalogs.set_root_dir_by_site('in2p3')
 import healpy
-import glob, sys
-import astropy.units as u
-from astropy.io import fits as fits
-from astropy.coordinates import SkyCoord, match_coordinates_sky
-import astropy
-import clmm
+import numpy as np
 import pandas as pd
-
-from astropy.table import QTable, Table, vstack, join, hstack
-import pickle, sys
+from astropy.coordinates import SkyCoord, match_coordinates_sky
+from astropy.io import fits as fits
+from astropy.table import QTable, Table, hstack, join, vstack
 
 
 def load(filename, **kwargs):
@@ -33,11 +33,12 @@ from scipy.integrate import simps
 
 # cosmoDC2 cosmology
 cosmo = Cosmology(H0=71.0, Omega_dm0=0.265 - 0.0448, Omega_b0=0.0448, Omega_k0=0.0)
+import argparse
+
+import _utils_cosmoDC2
 # connection with qserv
 import mysql
 from mysql.connector import Error
-import argparse
-import _utils_cosmoDC2
 
 mag_i_max = 24.25
 mag_r_max = 28
