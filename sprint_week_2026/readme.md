@@ -11,6 +11,7 @@ Run the code below:
 ```
 pip install clmm
 pip install pyccl
+pip install qp-prob
 ```
 
 Using `conda` may work, but it is under the lsst stack and may cause some issue.
@@ -37,6 +38,7 @@ cd path_to_CLMM
 pip uninstall clmm          # remove the 1.16.10 copy, if present
 pip install -e .            # links to your clone and installs the dependencies
 pip install pyccl           # or another backend
+pip install qp-prob
 ```
 
 This will use the current branch.  Run `git pull` to get the newest `main`.
